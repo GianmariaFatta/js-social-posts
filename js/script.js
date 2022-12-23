@@ -30,3 +30,58 @@
 //  console.log() è nostro amico.
 //  Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
 
+    const nameElement=document.querySelector(".post-meta__author");
+
+    const profilePic=document.querySelector(".profile-pic");
+
+    const dateElement=document.getElementsByClassName
+    ("post-meta__data")
+    
+    const textElement=document.getElementsByClassName("post__text")
+    
+    const imageElement=document.getElementsByClassName("post__image")
+    
+    const postElement=document.querySelector(".post")
+const post=[
+    {id: "1", name:"pippo", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+    {id: "1", name:"pluto", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+    {id: "1", name:"paperino", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+    {id: "1", name:"minnie", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+    {id: "1", name:"zio paperone", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+    {id: "1", name:"jimmy", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+   
+]
+
+for(let i=0; i<post.length; i++){
+    postElement.innerHTML+=`
+    <div class="post post-list">
+    <div class="post__header">
+      <div class="post-meta">
+        <div class="post-meta__icon">
+          <img class="profile-pic" src="${post[i].profile} " alt="Phil Mangione" />
+        </div>
+        <div class="post-meta__data">
+          <div id="nome" class="post-meta__author">${post[i].name} </div>
+          <div class="post-meta__time">4 mesi fa</div>
+        </div>
+      </div>
+    </div>
+    <div class="post__text"> ${post[i].text}
+    </div>
+    <div class="post__image">
+      <img src="${post[i].photo} " alt="" />
+    </div>
+    <div class="post__footer">
+      <div class="likes js-likes">
+        <div class="likes__cta">
+          <button class="like-button js-like-button" href="#" data-postid="1">
+            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+            <span class="like-button__label">Mi Piace</span>
+          </button>
+        </div>
+        <div class="likes__counter">Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone</div>
+      </div>
+    </div>
+    </div>`
+}
+
