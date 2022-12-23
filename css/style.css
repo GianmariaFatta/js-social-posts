@@ -34,6 +34,7 @@ h1 {
 .post {
   padding: 16px;
   background-color: white;
+  margin: 20px 0;
 }
 
 .post__header {
@@ -125,3 +126,6 @@ h1 {
   color: #0cd977;
   cursor: default;
 }
+ .margin{
+  margin-bottom:20px
+ }

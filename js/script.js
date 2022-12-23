@@ -44,9 +44,13 @@
     const postElement=document.querySelector(".post")
 const post=[
     {id: "1", name:"pippo", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
-    {id: "1", name:"pluto", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
-    {id: "1", name:"paperino", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
-    {id: "1", name:"minnie", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+
+    {id: "1", name:"pluto", photo:"img/pluto-post.jpg ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pluto.jpg"},
+
+    {id: "1", name:"paperino", photo:"img/paperino-post.png ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/paperino.jpg"},
+
+    {id: "1", name:"minnie", photo:"img/pippo-post.webp ", 
+    date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
     {id: "1", name:"zio paperone", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
     {id: "1", name:"jimmy", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
    
