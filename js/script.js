@@ -54,7 +54,7 @@
         <div class="post__footer">
           <div class="likes js-likes">
             <div class="likes__cta">
-              <button class="like-button js-like-button" href="#" data-postid="1">
+              <button class="like-button js-like-button " href="#" data-postid="1">
                 <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                 <span class="like-button__label">Mi Piace</span>
               </button>
@@ -66,37 +66,52 @@
       `
     }
 
+    const postListElement=document.querySelector(".post-list");
     const nameElement=document.querySelector(".post-meta__author");
     const profilePic=document.querySelector(".profile-pic");
     const dateElement=document.querySelector(".post-meta__data");
     const textElement=document.querySelector(".post__text");
     const imageElement=document.querySelector(".post__image");
     const postElement=document.querySelector(".post");
-    const postListElement=document.querySelector(".post-list");
-    const likeCounter=document.getElementById("like-counter-1");
-    const buttonLike=document.querySelector(".like-button")
+    
+    const post=[
+      {id: "1", name:"Pippo", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
+      
+      {id: "2", name:"Pluto", photo:"img/pluto-post.jpg ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pluto.jpg"},
+      
+      {id: "3", name:"Paperino", photo:"img/paperino-post.png ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/paperino.jpg"},
+      
+      {id: "4", name:"Zio Paperone", photo:"img/zio-paperone -post.jpg ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/zio-paperone.webp"},
+      
+      
+    ]
+    
+    
+    
+    for(let i=0; i<post.length; i++){
+      postGen(i)
+      
+    }
+    let likeCounterElement=document.querySelector(".js-likes-counter")
+    const buttonLike=document.querySelector(".js-like-button")
+    likeCounterElement.innerHTML=80
 
-
-const post=[
-    {id: "1", name:"Pippo", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
-
-    {id: "2", name:"Pluto", photo:"img/pluto-post.jpg ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pluto.jpg"},
-
-    {id: "3", name:"Paperino", photo:"img/paperino-post.png ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/paperino.jpg"},
-
-    {id: "4", name:"Zio Paperone", photo:"img/zio-paperone -post.jpg ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/zio-paperone.webp"},
-  
-   
-]
-
-
-
-for(let i=0; i<post.length; i++){
-    postGen(i)
-
-}
-
-buttonLike.addEventListener("click", function(){
-  likeCounter.innerHTML+=`81`
+    let liked=false
+    buttonLike.addEventListener("click", function(){
+      if(buttonLike.classList.contains("like-button--liked")){
+        buttonLike.classList.remove
+      ("like-button--liked");
+        likeCounterElement.innerHTML--
+        
+}else{ 
+      buttonLike.classList.add
+      ("like-button--liked");
+      likeCounterElement.innerHTML++
+      liked=true;
+    }
+      
+      
+      
+     
 })
 
