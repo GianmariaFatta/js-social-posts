@@ -72,7 +72,7 @@
     const dateElement=document.querySelector(".post-meta__data");
     const textElement=document.querySelector(".post__text");
     const imageElement=document.querySelector(".post__image");
-    const postElement=document.querySelector(".post");
+    const postElement=document.getElementById("container");
     
     const post=[
       {id: "1", name:"Pippo", photo:"img/pippo-post.webp ", date:"mm-gg-yyyy", text:"Placeat libero ipsa nobis ipsum quibusdam quas harum ut", profile:"img/pippo.jpg"},
